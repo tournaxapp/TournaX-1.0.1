@@ -4,111 +4,730 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090909">
-<title>TournaX | Gaming Tournament</title>
+<title>TournaX - Download App</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#090909;color:#fff;font-family:Arial,sans-serif;padding-bottom:75px}
-header{height:70px;background:#111;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #72531d}
-.logo{font-size:26px;font-weight:900;color:#edc66c}
-.user{background:#282828;border:1px solid #806126;padding:10px;border-radius:50%}
-.hero{margin:18px;padding:25px 18px;border-radius:18px;background:linear-gradient(135deg,#352713,#111 65%,#090909);border:1px solid #a47a2d}
-.tag{color:#f3d17e;font-size:12px;letter-spacing:2px}
-.hero h1{font-size:30px;margin:16px 0 10px;color:#f3d17e}
-.hero p{color:#c6c0b4;font-size:14px;line-height:1.7}
-.btn{display:inline-block;margin-top:18px;background:linear-gradient(90deg,#b08029,#f5d987);color:#111;padding:13px 20px;border:0;border-radius:8px;font-weight:bold;text-decoration:none}
-.section{padding:10px 18px;margin-top:22px}
-.heading{font-size:20px;color:#edc66c;margin-bottom:15px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.stat{background:#171717;border:1px solid #44351e;padding:15px 5px;border-radius:12px;text-align:center}
-.stat strong{display:block;font-size:20px;color:#edc66c;margin-bottom:6px}
-.stat small{font-size:11px;color:#aaa}
-.games{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.game{background:#171717;border:1px solid #44351e;padding:20px 8px;text-align:center;border-radius:13px}
-.game span{font-size:32px;display:block;margin-bottom:10px}
-.game b{color:#f0d080}
-.tournament{background:#171717;border:1px solid #514027;border-radius:13px;padding:17px;margin-bottom:13px}
-.tournament h3{color:#f0ce7c;margin-bottom:10px}
-.tournament p{font-size:13px;line-height:1.9;color:#bbb}
-.join{background:#d7ae4f;color:#111;border:0;padding:11px 18px;border-radius:7px;font-weight:bold;margin-top:12px}
-.feature{background:#171717;border:1px solid #42351f;padding:16px;border-radius:12px;line-height:2.2;color:#ddd}
-footer{text-align:center;color:#777;padding:25px;font-size:12px}
-nav{position:fixed;bottom:0;left:0;width:100%;background:#111;border-top:1px solid #59431e;display:flex;justify-content:space-around;padding:13px 4px}
-nav a{color:#e4c36d;text-decoration:none;font-size:12px;text-align:center}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #061b13;
+  color: #fff;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b99b45;
+}
+
+.logo {
+  color: #e5c45b;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.tag {
+  color: #e5c45b;
+  border: 1px solid #b99b45;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px 35px;
+}
+
+.app-icon {
+  width: 115px;
+  height: 115px;
+  margin: auto;
+  border-radius: 28px;
+  background: linear-gradient(145deg,#d9bd55,#876b19);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #082016;
+  font-size: 43px;
+  font-weight: 900;
+  box-shadow: 0 0 35px #c5a63c55;
+}
+
+h1 {
+  color: #e8c95e;
+  font-size: 36px;
+  margin-top: 25px;
+}
+
+.hero p {
+  color: #b9c9bf;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.download-box {
+  max-width: 420px;
+  margin: 25px auto;
+  padding: 25px;
+  background: #0c2b1d;
+  border: 1px solid #a98c38;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.download-box h2 {
+  color: #e5c45b;
+  margin-bottom: 12px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0;
+  color: #c4d1c9;
+  border-bottom: 1px solid #294735;
+  font-size: 14px;
+}
+
+.info strong {
+  color: #f0d36c;
+}
+
+.download-btn {
+  display: block;
+  margin-top: 25px;
+  padding: 16px;
+  background: linear-gradient(90deg,#b9932f,#f1d56b);
+  color: #102117;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 17px;
+  box-shadow: 0 5px 20px #c9a63d33;
+}
+
+.download-btn:active {
+  transform: scale(.97);
+}
+
+.note {
+  color: #9eb4a5;
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.features {
+  padding: 25px 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.features h2 {
+  text-align: center;
+  color: #e5c45b;
+  margin-bottom: 20px;
+}
+
+.feature {
+  background: #0c2b1d;
+  border: 1px solid #254d36;
+  padding: 17px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  color: #e3eee6;
+}
+
+.contact {
+  text-align: center;
+  padding: 35px 20px;
+  background: #092319;
+  margin-top: 25px;
+}
+
+.contact h2 {
+  color: #e5c45b;
+  margin-bottom: 12px;
+}
+
+.whatsapp {
+  display: inline-block;
+  background: #168b50;
+  color: white;
+  padding: 13px 25px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #82998a;
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TournaX - Download App</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #061b13;
+  color: #fff;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b99b45;
+}
+
+.logo {
+  color: #e5c45b;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.tag {
+  color: #e5c45b;
+  border: 1px solid #b99b45;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px 35px;
+}
+
+.app-icon {
+  width: 115px;
+  height: 115px;
+  margin: auto;
+  border-radius: 28px;
+  background: linear-gradient(145deg,#d9bd55,#876b19);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #082016;
+  font-size: 43px;
+  font-weight: 900;
+  box-shadow: 0 0 35px #c5a63c55;
+}
+
+h1 {
+  color: #e8c95e;
+  font-size: 36px;
+  margin-top: 25px;
+}
+
+.hero p {
+  color: #b9c9bf;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.download-box {
+  max-width: 420px;
+  margin: 25px auto;
+  padding: 25px;
+  background: #0c2b1d;
+  border: 1px solid #a98c38;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.download-box h2 {
+  color: #e5c45b;
+  margin-bottom: 12px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0;
+  color: #c4d1c9;
+  border-bottom: 1px solid #294735;
+  font-size: 14px;
+}
+
+.info strong {
+  color: #f0d36c;
+}
+
+.download-btn {
+  display: block;
+  margin-top: 25px;
+  padding: 16px;
+  background: linear-gradient(90deg,#b9932f,#f1d56b);
+  color: #102117;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 17px;
+  box-shadow: 0 5px 20px #c9a63d33;
+}
+
+.download-btn:active {
+  transform: scale(.97);
+}
+
+.note {
+  color: #9eb4a5;
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.features {
+  padding: 25px 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.features h2 {
+  text-align: center;
+  color: #e5c45b;
+  margin-bottom: 20px;
+}
+
+.feature {
+  background: #0c2b1d;
+  border: 1px solid #254d36;
+  padding: 17px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  color: #e3eee6;
+}
+
+.contact {
+  text-align: center;
+  padding: 35px 20px;
+  background: #092319;
+  margin-top: 25px;
+}
+
+.contact h2 {
+  color: #e5c45b;
+  margin-bottom: 12px;
+}
+
+.whatsapp {
+  display: inline-block;
+  background: #168b50;
+  color: white;
+  padding: 13px 25px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #82998a;
+  font-size: 12px;
+  border-top: 1px solid #25432f;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">⚡ TournaX</div>
-<div class="user">👤</div>
+  <div class="logo">TournaX</div>
+  <div class="tag">OFFICIAL APP</div>
 </header>
 
-<div class="hero">
-<div class="tag">WELCOME TO TOURNA X</div>
-<h1>PLAY. COMPETE. WIN.</h1>
-<p>Join the ultimate gaming tournament platform. Compete with players and fight for victory!</p>
-<a href="#tournaments" class="btn">Explore Tournaments →</a>
-</div>
+<section class="hero">
 
-<section class="section">
-<h2 class="heading">🏆 Tournament Overview</h2>
-<div class="stats">
-<div class="stat"><strong>0</strong><small>Tournaments</small></div>
-<div class="stat"><strong>0</strong><small>Players</small></div>
-<div class="stat"><strong>৳0</strong><small>Prize Pool</small></div>
-</div>
+  <div class="app-icon">TX</div>
+
+  <h1>TOURNAX APP</h1>
+
+  <p>
+    Play. Compete. Win.<br>
+    Your Ultimate Gaming Tournament Platform.
+  </p>
+
 </section>
 
-<section class="section">
-<h2 class="heading">🎮 Popular Games</h2>
-<div class="games">
-<div class="game"><span>🔥</span><b>Free Fire</b></div>
-<div class="game"><span>🎯</span><b>PUBG Mobile</b></div>
-<div class="game"><span>⚽</span><b>eFootball</b></div>
-<div class="game"><span>🎲</span><b>Ludo</b></div>
-</div>
+<section class="download-box">
+
+  <h2>Download TournaX</h2>
+
+  <div class="info">
+    <span>App Name</span>
+    <strong>TournaX</strong>
+  </div>
+
+  <div class="info">
+    <span>Version</span>
+    <strong>1.0.1</strong>
+  </div>
+
+  <div class="info">
+    <span>File Type</span>
+    <strong>Android APK</strong>
+  </div>
+
+  <div class="info">
+    <span>Platform</span>
+    <strong>Android</strong>
+  </div>
+
+  <a class="download-btn"
+     href="TournaX.apk"
+     download="TournaX.apk">
+     ⬇ DOWNLOAD NOW
+  </a>
+
+  <p class="note">
+    Download the official TournaX Android app.
+  </p>
+
 </section>
 
-<section class="section" id="tournaments">
-<h2 class="heading">🏆 Featured Tournaments</h2>
-<div class="tournament">
-<h3>🔥 Free Fire Battle</h3>
-<p>Entry Fee: ৳20<br>Prize Pool: ৳500<br>Status: Coming Soon</p>
-<button class="join" onclick="alert('Registration coming soon!')">Join Tournament</button>
-</div>
-<div class="tournament">
-<h3>🎯 PUBG Mobile Challenge</h3>
-<p>Entry Fee: ৳30<br>Prize Pool: ৳1000<br>Status: Coming Soon</p>
-<button class="join" onclick="alert('Registration coming soon!')">Join Tournament</button>
-</div>
-<div class="tournament">
-<h3>⚽ eFootball Cup</h3>
-<p>Entry Fee: ৳20<br>Prize Pool: ৳500<br>Status: Coming Soon</p>
-<button class="join" onclick="alert('Registration coming soon!')">Join Tournament</button>
-</div>
+<section class="features">
+
+  <h2>Why TournaX?</h2>
+
+  <div class="feature">
+    🏆 Gaming Tournament Platform
+  </div>
+
+  <div class="feature">
+    🎮 Multiple Popular Games
+  </div>
+
+  <div class="feature">
+    💰 Prize Pool & Competition
+  </div>
+
+  <div class="feature">
+    ⚡ Easy App Experience
+  </div>
+
 </section>
 
-<section class="section">
-<h2 class="heading">💎 Premium Features</h2>
-<div class="feature">
-👤 User Login & Registration<br>
-🏆 Tournament Registration<br>
-💰 Wallet & Transactions<br>
-🎁 Referral Rewards<br>
-🥇 Leaderboard<br>
-🛡️ Admin Panel
-</div>
+<section class="contact">
+
+  <h2>Need Help?</h2>
+
+  <p>Contact TournaX Support on WhatsApp</p>
+
+  <a class="whatsapp"
+     href="https://wa.me/8801330051790"
+     target="_blank">
+     WhatsApp Contact
+  </a>
+
 </section>
 
-<footer>© 2026 TournaX. All Rights Reserved.</footer>
+<footer>
+  © 2026 TournaX. All Rights Reserved.
+</footer>
 
-<nav>
-<a href="#">🏠<br>Home</a>
-<a href="#tournaments">🏆<br>Tournaments</a>
-<a href="#" onclick="alert('Wallet coming soon!')">💰<br>Wallet</a>
-<a href="#" onclick="alert('Profile coming soon!')">👤<br>Profile</a>
-</nav>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TournaX - Download App</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #061b13;
+  color: #fff;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b99b45;
+}
+
+.logo {
+  color: #e5c45b;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.tag {
+  color: #e5c45b;
+  border: 1px solid #b99b45;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px 35px;
+}
+
+.app-icon {
+  width: 115px;
+  height: 115px;
+  margin: auto;
+  border-radius: 28px;
+  background: linear-gradient(145deg,#d9bd55,#876b19);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #082016;
+  font-size: 43px;
+  font-weight: 900;
+  box-shadow: 0 0 35px #c5a63c55;
+}
+
+h1 {
+  color: #e8c95e;
+  font-size: 36px;
+  margin-top: 25px;
+}
+
+.hero p {
+  color: #b9c9bf;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.download-box {
+  max-width: 420px;
+  margin: 25px auto;
+  padding: 25px;
+  background: #0c2b1d;
+  border: 1px solid #a98c38;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.download-box h2 {
+  color: #e5c45b;
+  margin-bottom: 12px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0;
+  color: #c4d1c9;
+  border-bottom: 1px solid #294735;
+  font-size: 14px;
+}
+
+.info strong {
+  color: #f0d36c;
+}
+
+.download-btn {
+  display: block;
+  margin-top: 25px;
+  padding: 16px;
+  background: linear-gradient(90deg,#b9932f,#f1d56b);
+  color: #102117;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 17px;
+  box-shadow: 0 5px 20px #c9a63d33;
+}
+
+.download-btn:active {
+  transform: scale(.97);
+}
+
+.note {
+  color: #9eb4a5;
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.features {
+  padding: 25px 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.features h2 {
+  text-align: center;
+  color: #e5c45b;
+  margin-bottom: 20px;
+}
+
+.feature {
+  background: #0c2b1d;
+  border: 1px solid #254d36;
+  padding: 17px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  color: #e3eee6;
+}
+
+.contact {
+  text-align: center;
+  padding: 35px 20px;
+  background: #092319;
+  margin-top: 25px;
+}
+
+.contact h2 {
+  color: #e5c45b;
+  margin-bottom: 12px;
+}
+
+.whatsapp {
+  display: inline-block;
+  background: #168b50;
+  color: white;
+  padding: 13px 25px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #82998a;
+  font-size: 12px;
+  border-top: 1px solid #25432f;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">TournaX</div>
+  <div class="tag">OFFICIAL APP</div>
+</header>
+
+<section class="hero">
+
+  <div class="app-icon">TX</div>
+
+  <h1>TOURNAX APP</h1>
+
+  <p>
+    Play. Compete. Win.<br>
+    Your Ultimate Gaming Tournament Platform.
+  </p>
+
+</section>
+
+<section class="download-box">
+
+  <h2>Download TournaX</h2>
+
+  <div class="info">
+    <span>App Name</span>
+    <strong>TournaX</strong>
+  </div>
+
+  <div class="info">
+    <span>Version</span>
+    <strong>1.0.1</strong>
+  </div>
+
+  <div class="info">
+    <span>File Type</span>
+    <strong>Android APK</strong>
+  </div>
+
+  <div class="info">
+    <span>Platform</span>
+    <strong>Android</strong>
+  </div>
+
+  <a class="download-btn"
+     href="TournaX.apk"
+     download="TournaX.apk">
+     ⬇ DOWNLOAD NOW
+  </a>
+
+  <p class="note">
+    Download the official TournaX Android app.
+  </p>
+
+</section>
+
+<section class="features">
+
+  <h2>Why TournaX?</h2>
+
+  <div class="feature">
+    🏆 Gaming Tournament Platform
+  </div>
+
+  <div class="feature">
+    🎮 Multiple Popular Games
+  </div>
+
+  <div class="feature">
+    💰 Prize Pool & Competition
+  </div>
+
+  <div class="feature">
+    ⚡ Easy App Experience
+  </div>
+
+</section>
+
+<section class="contact">
+
+  <h2>Need Help?</h2>
+
+  <p>Contact TournaX Support on WhatsApp</p>
+
+  <a class="whatsapp"
+     href="https://wa.me/8801330051790"
+     target="_blank">
+     WhatsApp Contact
+  </a>
+
+</section>
+
+<footer>
+  © 2026 TournaX. All Rights Reserved.
+</footer>
 
 </body>
 </html>
